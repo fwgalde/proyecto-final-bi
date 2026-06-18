@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Opcional si el dataset no debe subirse a GitHub público
+# datasets/raw/*.xlsx
