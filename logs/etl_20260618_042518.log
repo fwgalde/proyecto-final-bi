@@ -1,0 +1,14 @@
+2026-06-18 04:25:18 | INFO | Log file: E:\fwgalde\Documents\Projects\proyecto_final_bi\logs\etl_20260618_042518.log
+2026-06-18 04:25:18 | INFO | EXTRACT | Reading workbook: E:\fwgalde\Documents\Projects\proyecto_final_bi\datasets\raw\raw_data.xlsx
+2026-06-18 04:26:01 | INFO | EXTRACT | Hoja1 rows=96,195 columns=57 | CODIGOS ANIMALES rows=13,829 | 43.48s
+2026-06-18 04:26:01 | INFO | TRANSFORM | Cleaning and typing source data
+2026-06-18 04:26:05 | INFO | VALIDATE SOURCE | Running business-rule checks
+2026-06-18 04:26:05 | INFO | VALIDATE SOURCE | PASS | rows=96,195 sheep=13,829 controls=2016-03-10..2016-06-29 milk_avg=2.2231 missing_group_space=18
+2026-06-18 04:26:05 | INFO | TRANSFORM | Completed in 3.69s
+2026-06-18 04:26:05 | INFO | BUILD | Creating dynamic dimensions
+2026-06-18 04:26:05 | INFO | BUILD | dim_sheep rows=13,829
+2026-06-18 04:26:05 | INFO | BUILD | dim_date rows=654
+2026-06-18 04:26:05 | INFO | BUILD | dim_management rows=12
+2026-06-18 04:26:05 | INFO | BUILD | dim_weather_condition rows=14
+2026-06-18 04:26:05 | INFO | BUILD | dim_lunar rows=35
+2026-06-18 04:26:05 | INFO | VALIDATE-ONLY | PASS | Database was not modified

@@ -1,0 +1,26 @@
+2026-06-18 04:31:13 | INFO | Log file: E:\fwgalde\Documents\Projects\proyecto_final_bi\logs\etl_20260618_043113.log
+2026-06-18 04:31:13 | INFO | EXTRACT | Reading workbook: E:\fwgalde\Documents\Projects\proyecto_final_bi\datasets\raw\raw_data.xlsx
+2026-06-18 04:31:51 | INFO | EXTRACT | Hoja1 rows=96,195 columns=57 | CODIGOS ANIMALES rows=13,829 | 37.85s
+2026-06-18 04:31:51 | INFO | TRANSFORM | Cleaning and typing source data
+2026-06-18 04:31:55 | INFO | VALIDATE SOURCE | Running business-rule checks
+2026-06-18 04:31:55 | INFO | VALIDATE SOURCE | PASS | rows=96,195 sheep=13,829 controls=2016-03-10..2016-06-29 milk_avg=2.2231 missing_group_space=18
+2026-06-18 04:31:55 | INFO | TRANSFORM | Completed in 3.81s
+2026-06-18 04:31:55 | INFO | BUILD | Creating dynamic dimensions
+2026-06-18 04:31:55 | INFO | BUILD | dim_sheep rows=13,829
+2026-06-18 04:31:55 | INFO | BUILD | dim_date rows=654
+2026-06-18 04:31:55 | INFO | BUILD | dim_management rows=12
+2026-06-18 04:31:55 | INFO | BUILD | dim_weather_condition rows=14
+2026-06-18 04:31:55 | INFO | BUILD | dim_lunar rows=35
+2026-06-18 04:31:55 | INFO | LOAD | Opening database transaction
+2026-06-18 04:31:56 | INFO | LOAD | Truncating dynamic warehouse tables
+2026-06-18 04:31:57 | INFO | LOAD | dim_sheep rows=13,829
+2026-06-18 04:32:00 | INFO | LOAD | dim_date rows=654
+2026-06-18 04:32:01 | INFO | LOAD | dim_management rows=12
+2026-06-18 04:32:01 | INFO | LOAD | dim_weather_condition rows=14
+2026-06-18 04:32:01 | INFO | LOAD | dim_lunar rows=35
+2026-06-18 04:32:01 | INFO | BUILD | Resolving surrogate keys for fact_milk_control
+2026-06-18 04:32:02 | INFO | BUILD | fact_milk_control rows=96,195 columns=41
+2026-06-18 04:32:02 | INFO | LOAD | fact_milk_control rows=96,195
+2026-06-18 04:33:34 | INFO | VALIDATE LOAD | Running database checks
+2026-06-18 04:33:35 | INFO | VALIDATE LOAD | PASS | fact=96,195 sheep=13,829 dates=654 management=12 weather=14 lunar=35
+2026-06-18 04:33:35 | INFO | ETL COMPLETE | Transaction committed successfully
